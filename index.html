@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Day View</title>
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+	<script src="jquery.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+	<link href='fullcalendar/fullcalendar.css' rel='stylesheet'/>
+	<link href='fullcalendar/fullcalendar.print.css' rel='stylesheet' media='print' />
+	<script type="text/javascript" src="moment.js"></script>
+	
+	<script src='fullcalendar/fullcalendar.min.js'></script>
+	<style>
+     .modal-header, h4, .close 
+     {
+      background-color: #5cb85c;
+      color:white !important;
+      text-align: center;
+      font-size: 30px;
+      }
+     .modal-footer 
+     {
+      background-color: #f9f9f9;
+     }
+    </style>
+    <script type="text/javascript" src="script.js"></script>
+
+</head>
+<body>
+
+   <div class="container">
+  <!-- Trigger the modal with a button -->
+  <button type="button" class="btn btn-primary btn-lg center-block" data-toggle="modal"  id="schedule_event" data-target="#myModal">Schedule Event</button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header" style="padding:35px 50px;">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4><span class="glyphicon glyphicon-lock"></span>Schedule Event</h4>
+        </div>
+        <div class="modal-body" style="padding:40px 50px;">
+          <form role="form">
+            <div class="form-group">
+              <label for="eventname"><span class="glyphicon glyphicon-edit"></span>Event Name</label>
+              <input type="text" class="form-control" name="eventname" id="eventname" placeholder="Enter Event Name">
+            </div>
+            <div class="form-group">
+              <label for="stime"><span class="glyphicon glyphicon-time"></span>Start Time</label>
+              <input type="text" class="form-control" name="stime" id="stime" placeholder="Enter Start Time in HH:MM AM/PM format">
+            </div>
+            <div class="form-group">
+              <label for="etime"><span class="glyphicon glyphicon-time"></span>End Time</label>
+              <input type="text" class="form-control" name="etime" id="etime" placeholder="Enter End Time HH:MM AM/PM format">
+            </div>
+              <button type="button" class="btn btn-success btn-block" id="submit"><span class="glyphicon glyphicon-off"></span> Save</button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
+          
+        </div>
+      </div>
+      
+    </div>
+  </div> 
+</div>
+
+     
+	<div id='calendar'></div>
+
+</body>
+</html>
